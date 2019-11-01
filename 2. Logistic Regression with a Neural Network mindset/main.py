@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy
 from PIL import Image
-from scipy import ndimage
 from load_dataset import load_dataset
 from sigmoid import sigmoid
 from initialize_with_zeros import initialize_with_zeros
@@ -85,23 +83,18 @@ X = np.array([[1.,-1.1,-3.2],[1.2,2.,0.1]])
 print ("predictions = " + str(predict(w, b, X)))
 
 print("====================== 5 - Merge all functions into a model ======================")
-d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = True)
+d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = False)
 
-# Example of a picture that was correctly classified.
-index = 1
-plt.imshow(test_set_x[:,index].reshape((num_px, num_px, 3)))
+print("====================== 7 - Test with image (optional/ungraded exercise) ======================")
+my_image = "my_image3.jpg"   # change this to the name of your image file
+
+# We preprocess the image to fit your algorithm.
+fname = "images/" + my_image
+image = np.array(Image.open(fname))
+image = image/255.
+my_image = np.array(Image.fromarray(image, mode = "RGB").resize((num_px,num_px))).reshape((1, num_px*num_px*3)).T
+my_predicted_image = predict(d["w"], d["b"], my_image)
+
+plt.imshow(image)
 plt.show()
-print("y = " +
-      str(test_set_y[0, index]) +
-      ", you predicted that it is a \"" +
-      classes[int(d["Y_prediction_test"][0, index])].decode("utf-8") +
-      "\" picture.")
-
-# Plot learning curve (with costs)
-costs = np.squeeze(d['costs'])
-plt.plot(costs)
-plt.ylabel('cost')
-plt.xlabel('iterations (per hundreds)')
-plt.title("Learning rate =" + str(d["learning_rate"]))
-plt.show()
-
+print("y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" + classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") +  "\" picture.")

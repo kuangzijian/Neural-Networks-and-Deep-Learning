@@ -11,7 +11,7 @@ def sigmoid_derivative(x):
     x -- A scalar or numpy array
 
     Return:
-    ds -- Your computed gradient.
+    ds -- computed gradient.
     """
 
     s = 1 / (1 + np.exp(-x))
