@@ -12,7 +12,6 @@ def softmax(x):
     s -- A numpy matrix equal to the softmax of x, of shape (m,n)
     """
 
-    ### START CODE HERE ### (≈ 3 lines of code)
     # Apply exp() element-wise to x. Use np.exp(...).
     x_exp = np.exp(x)
 
@@ -22,6 +21,5 @@ def softmax(x):
     # Compute softmax(x) by dividing x_exp by x_sum. It should automatically use numpy broadcasting.
     s = x_exp / x_sum
 
-    ### END CODE HERE ###
 
     return s

@@ -11,8 +11,6 @@ def L2(yhat, y):
     loss -- the value of the L2 loss function defined above
     """
 
-    ### START CODE HERE ### (≈ 1 line of code)
     loss = np.sum(np.power((y - yhat), 2))
-    ### END CODE HERE ###
 
     return loss

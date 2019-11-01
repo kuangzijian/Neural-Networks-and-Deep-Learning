@@ -13,10 +13,8 @@ def initialize_with_zeros(dim):
     b -- initialized scalar (corresponds to the bias)
     """
 
-    ### START CODE HERE ### (≈ 1 line of code)
     w = np.zeros(shape=(dim, 1))
     b = 0
-    ### END CODE HERE ###
 
     assert (w.shape == (dim, 1))
     assert (isinstance(b, float) or isinstance(b, int))

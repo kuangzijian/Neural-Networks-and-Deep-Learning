@@ -30,19 +30,15 @@ def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
     for i in range(num_iterations):
 
         # Cost and gradient calculation (≈ 1-4 lines of code)
-        ### START CODE HERE ###
         grads, cost = propagate(w, b, X, Y)
-        ### END CODE HERE ###
 
         # Retrieve derivatives from grads
         dw = grads["dw"]
         db = grads["db"]
 
         # update rule (≈ 2 lines of code)
-        ### START CODE HERE ###
         w -= learning_rate * dw
         b -= learning_rate * db
-        ### END CODE HERE ###
 
         # Record the costs
         if i % 100 == 0:

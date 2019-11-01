@@ -14,9 +14,6 @@ def sigmoid_derivative(x):
     ds -- Your computed gradient.
     """
 
-    ### START CODE HERE ### (≈ 2 lines of code)
     s = 1 / (1 + np.exp(-x))
     ds = s * (1 - s)
-    ### END CODE HERE ###
-
     return ds

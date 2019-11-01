@@ -12,12 +12,10 @@ def normalizeRows(x):
     x -- The normalized (by row) numpy matrix. You are allowed to modify x.
     """
 
-    ### START CODE HERE ### (≈ 2 lines of code)
     # Compute x_norm as the norm 2 of x. Use np.linalg.norm(..., ord = 2, axis = ..., keepdims = True)
     x_norm = np.linalg.norm(x, axis=1, keepdims=True)
 
     # Divide x by its norm.
     x = x / x_norm
-    ### END CODE HERE ###
 
     return x
