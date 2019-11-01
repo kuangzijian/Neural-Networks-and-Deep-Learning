@@ -85,6 +85,45 @@ print ("predictions = " + str(predict(w, b, X)))
 print("====================== 5 - Merge all functions into a model ======================")
 d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = False)
 
+# Example of a picture that was correctly classified.
+index = 1
+plt.imshow(test_set_x[:,index].reshape((num_px, num_px, 3)))
+#plt.show()
+print("y = " +
+      str(test_set_y[0, index]) +
+      ", you predicted that it is a \"" +
+      classes[int(d["Y_prediction_test"][0, index])].decode("utf-8") +
+      "\" picture.")
+
+# Plot learning curve (with costs)
+costs = np.squeeze(d['costs'])
+#plt.plot(costs)
+
+plt.ylabel('cost')
+plt.xlabel('iterations (per hundreds)')
+plt.title("Learning rate =" + str(d["learning_rate"]))
+#plt.show()
+
+print("====================== 6 - Further analysis (optional/ungraded exercise) ======================")
+
+learning_rates = [0.01, 0.001, 0.0001]
+models = {}
+for i in learning_rates:
+    print ("learning rate is: " + str(i))
+    models[str(i)] = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 1500, learning_rate = i, print_cost = False)
+    print ('\n' + "-------------------------------------------------------" + '\n')
+
+for i in learning_rates:
+    plt.plot(np.squeeze(models[str(i)]["costs"]), label= str(models[str(i)]["learning_rate"]))
+
+plt.ylabel('cost')
+plt.xlabel('iterations (hundreds)')
+
+legend = plt.legend(loc='upper center', shadow=True)
+frame = legend.get_frame()
+frame.set_facecolor('0.90')
+#plt.show()
+
 print("====================== 7 - Test with image (optional/ungraded exercise) ======================")
 my_image = "my_image3.jpg"   # change this to the name of your image file
 
