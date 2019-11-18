@@ -1,4 +1,4 @@
-# GRADED FUNCTION: sigmoid_derivative
+# sigmoid_derivative
 import numpy as np
 
 

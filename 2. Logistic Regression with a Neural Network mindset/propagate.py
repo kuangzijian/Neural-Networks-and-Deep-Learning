@@ -1,9 +1,9 @@
-# GRADED FUNCTION: propagate
+# propagate
 from sigmoid import sigmoid
 import numpy as np
 
 
-# GRADED FUNCTION: propagate
+# propagate
 
 def propagate(w, b, X, Y):
     """

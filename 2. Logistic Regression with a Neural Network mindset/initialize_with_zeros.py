@@ -1,4 +1,4 @@
-# GRADED FUNCTION: initialize_with_zeros
+# initialize_with_zeros
 import numpy as np
 
 def initialize_with_zeros(dim):

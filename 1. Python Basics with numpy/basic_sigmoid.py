@@ -1,4 +1,4 @@
-# GRADED FUNCTION: basic_sigmoid
+# basic_sigmoid
 
 import math
 

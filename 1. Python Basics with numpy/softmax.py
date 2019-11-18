@@ -1,4 +1,4 @@
-# GRADED FUNCTION: softmax
+# softmax
 import numpy as np
 def softmax(x):
     """Calculates the softmax for each row of the input x.

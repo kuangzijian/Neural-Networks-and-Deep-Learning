@@ -1,4 +1,4 @@
-# GRADED FUNCTION: normalizeRows
+# normalizeRows
 import numpy as np
 
 def normalizeRows(x):

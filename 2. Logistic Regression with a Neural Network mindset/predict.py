@@ -1,4 +1,4 @@
-# GRADED FUNCTION: predict
+# predict
 import numpy as np
 from sigmoid import sigmoid
 

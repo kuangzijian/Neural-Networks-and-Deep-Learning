@@ -1,4 +1,4 @@
-# GRADED FUNCTION: image2vector
+# image2vector
 def image2vector(image):
     """
     Argument:

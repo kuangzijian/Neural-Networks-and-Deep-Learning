@@ -1,4 +1,4 @@
-# GRADED FUNCTION: sigmoid
+# sigmoid
 import numpy as np
 
 def sigmoid(z):

@@ -1,4 +1,4 @@
-# GRADED FUNCTION: model
+# model
 import numpy as np
 from initialize_with_zeros import initialize_with_zeros
 from optimize import optimize

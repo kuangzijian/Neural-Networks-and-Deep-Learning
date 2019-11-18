@@ -1,4 +1,4 @@
-# GRADED FUNCTION: L1
+# L1
 import numpy as np
 
 def L1(yhat, y):

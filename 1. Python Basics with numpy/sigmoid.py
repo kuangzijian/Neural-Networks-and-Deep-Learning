@@ -1,4 +1,4 @@
-# GRADED FUNCTION: sigmoid
+# sigmoid
 
 import numpy as np  # this means you can access numpy functions by writing np.function() instead of numpy.function()
 

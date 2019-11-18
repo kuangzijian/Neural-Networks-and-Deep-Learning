@@ -1,4 +1,4 @@
-# GRADED FUNCTION: optimize
+# optimize
 from propagate import propagate
 
 def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
