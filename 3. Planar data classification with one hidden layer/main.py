@@ -152,4 +152,4 @@ if dataset == "blobs":
     Y = Y%2
 
 # Visualize the data
-plt.scatter(X[0, :], X[1, :], c=Y.reval(), s=40, cmap=plt.cm.Spectral)
+plt.scatter(X[0, :], X[1, :], c=Y.ravel(), s=40, cmap=plt.cm.Spectral)
